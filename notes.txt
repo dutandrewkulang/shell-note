@@ -1,0 +1,38 @@
+Shell standard input and output
+
+running ls will print out the content of a directory but what if you want to instead write the result of ls to a file.
+
+1. use >
+ls > results.txt
+=== write the result of ls into a file called results.txt
+---- If results.txt is has some text in it, using > will delete everything inside that file. but if its empty, > will create it.
+
+2. use >> 
+ls >> results.txt
+
+just like >, >>  will NOT however delete the content inside that file but just concatinate/ append the new data to the end of the existing datat in the file.
+
+===================== Writing error messages in a file
+ls fish/apple/me
+list out the content inside the me file at fish/apple path
+Because this path does not exist on my computer, an erro will be thrown at me.
+So if i want to write/ store the error message in a file, i write 2>> or 2>
+2> will overwrite the file content
+2>> will append to the file.
+
+======== concatenating================
+to join two files together though cat can be used to see the content inside a file.
+cat file1.tx file2.txt
+
+---- join the content in file1.txt with that of file2.txt and print the result out.
+cat file1.txt file2.txt >> file12.txt
+after joining files write the result into file12.txt
+*** Note
+you can join more than two file together. ***
+
+cat can be used to ask for input from the user
+cat {enter}
+press Ctrl + d to exist out
+
+cat > answers.txt
+ask for input from the user and save it inside answers.txt in overwrite mode 
