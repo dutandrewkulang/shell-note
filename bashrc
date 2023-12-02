@@ -1,5 +1,6 @@
 #ALX server
-alias alxs="ssh ubuntu@52.3.243.110"
+alias alxs="ssh ubuntu@54.152.55.230"
+export PATH="$HOME/.local/bin:$PATH"
 alias update="sudo apt update -y && sudo apt upgrade -y"
 #personal shortcuts
 alias mex="chmod u+x $1"
@@ -15,7 +16,9 @@ alias scuts="source ~/.bashrc"
 alias e="emacs -nw $1"
 alias v="vi $1"
 alias rmv="rm -rf $1"
-
+alias pip="pip3"
+#map js -> node
+alias js="node $1"
 #install .deb package software
 
 alias installdeb="sudo dpkg -i $1"
@@ -30,16 +33,18 @@ alias pipget="pip install $1"
 
 alias pipremove="pip uninstall $1"
 
-#---------------------------------Git and GitHub
+#----------- Git and GitHub -------------
 alias gitp="git push"
 alias gits="git status"
 alias gitc="git clone"
+alias gitm="git merge"
 alias gitpl="git pull"
 alias gitcm="git commit -m $1"
 alias gitbr="git branch -a"
 alias gitb="git branch $1"
 alias gitsw="git switch $1"
 alias gitf="git fetch"
+alias gitdf="git diff $1"
 #Add everything to staging area
 alias gitall="git add ."
 
@@ -53,8 +58,13 @@ alias gitch="git checkout $1"
 alias gitac="gitall && gitcm"
 
 #-------------------------------------------- Django
+# activate virtual environment
 
-alias myenv="cd ~/Django\ projects/ && source .myenv/bin/activate"
+myenv ()
+{
+  source "$1"/bin/activate
+}
+alias make_env="virtualenv $1"
 alias djsh="django-admin shell"
 alias djp="django-admin startproject $1"
 alias dja="py manage.py startapp $1"
@@ -62,8 +72,9 @@ alias djr="py manage.py runserver $1"
 alias djmm="py manage.py makemigrations"
 alias djm="py manage.py migrate"
 alias djmmm="djmm && djm"
-alias csu="py manage.py createsuperuser"
+alias djcsu="py manage.py createsuperuser"
 #------------------Docker-------------------------------------
 alias docker="sudo docker $1"
 #-------------------------Xampp----------------------------------------
-alias sxampp="sudo opt/lampp/manager-linux-x64.run"
+alias sxampp="sudo /opt/lampp/manager-linux-x64.run"
+#--------------------------------------------------------
