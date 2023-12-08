@@ -1,1 +1,2 @@
-sudo apt install guake ; ./vim_setup_script.sh
+touch ~/.bashrc ~/.vimrc ; cat ./bashrc > ~/.bashrc ; cat ./vimrc > ~/.vimrc ; source ~/.bashrc ; update
+sudo apt install guake cmatrix ascii gcc g++ make celluloid  ; ./vim_setup_script.sh
